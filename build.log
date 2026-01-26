@@ -1,0 +1,518 @@
+2026-01-26 15:16:40,167 - INFO - =========================================
+2026-01-26 15:16:40,167 - INFO -         Android APK �Զ������ű�        
+2026-01-26 15:16:40,169 - INFO - =========================================
+2026-01-26 15:16:40,171 - INFO - Python�汾: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2026-01-26 15:16:40,171 - INFO - ��ǰĿ¼: D:\review
+2026-01-26 15:16:40,171 - INFO - === ��װ�������� ===
+2026-01-26 15:16:40,171 - INFO - ִ������: C:\Users\��\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip
+2026-01-26 15:16:42,175 - INFO - �������:
+Requirement already satisfied: pip in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (25.3)
+
+2026-01-26 15:16:42,175 - INFO - ִ������: C:\Users\��\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade python-for-android cython
+2026-01-26 15:16:44,297 - INFO - �������:
+Requirement already satisfied: python-for-android in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (2024.1.21)
+Requirement already satisfied: cython in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (3.2.4)
+Requirement already satisfied: appdirs in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from python-for-android) (1.4.4)
+Requirement already satisfied: colorama>=0.3.3 in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from python-for-android) (0.4.6)
+Requirement already satisfied: jinja2 in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from python-for-android) (3.1.6)
+Requirement already satisfied: build in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from python-for-android) (1.4.0)
+Requirement already satisfied: toml in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from python-for-android) (0.10.2)
+Requirement already satisfied: packaging in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from python-for-android) (26.0)
+Requirement already satisfied: setuptools in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from python-for-android) (65.5.0)
+Requirement already satisfied: pyproject_hooks in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from build->python-for-android) (1.2.0)
+Requirement already satisfied: tomli>=1.1.0 in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from build->python-for-android) (2.4.0)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\��\appdata\local\programs\python\python310\lib\site-packages (from jinja2->python-for-android) (3.0.3)
+
+2026-01-26 15:16:44,318 - INFO - === ��ʼ����APK ===
+2026-01-26 15:16:44,535 - ERROR - ��ȷ��python-for-android����ȷ��װ
+2026-01-26 15:16:44,538 - INFO - =========================================
+2026-01-26 15:29:19,829 - INFO - =========================================
+2026-01-26 15:29:19,831 - INFO -         Android APK 最终构建脚本        
+2026-01-26 15:29:19,832 - INFO - =========================================
+2026-01-26 15:29:19,832 - INFO - Python版本: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2026-01-26 15:29:19,832 - INFO - 当前操作系统: win32
+2026-01-26 15:29:19,832 - INFO - 当前目录: D:\review
+2026-01-26 15:29:19,832 - INFO - 检测到Windows系统，将使用Docker容器构建APK
+2026-01-26 15:29:19,834 - INFO - 执行命令: docker --version
+2026-01-26 15:29:20,083 - INFO - 命令输出:
+Docker version 29.1.3, build f52814d
+
+2026-01-26 15:29:20,083 - INFO - 执行命令: docker info
+2026-01-26 15:29:20,953 - INFO - 命令输出:
+Client:
+ Version:    29.1.3
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.17.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-ai.exe
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.30.1-desktop.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.0.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-compose.exe
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     C:\Program Files\Docker\cli-plugins\docker-debug.exe
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.2.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-desktop.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     C:\Program Files\Docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-init.exe
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.35.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-mcp.exe
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.0.6
+    Path:     C:\Program Files\Docker\cli-plugins\docker-model.exe
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.5.40
+    Path:     C:\Program Files\Docker\cli-plugins\docker-offload.exe
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.0.22
+    Path:     C:\Program Files\Docker\cli-plugins\docker-pass.exe
+  sandbox: Docker Sandbox (Docker Inc.)
+    Version:  v0.6.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sandbox.exe
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sbom.exe
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.19.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 29.1.3
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: nvidia runc io.containerd.runc.v2
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: dea7da592f5d1d2b7755e3a161be07f43fad8f75
+ runc version: v1.3.4-0-gd6d73eb8
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.6.87.2-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 3.748GiB
+ Name: docker-desktop
+ ID: e6dcb587-e428-4c68-8be8-d4a4811262e9
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Registry Mirrors:
+  https://registry.cn-hangzhou.aliyuncs.com/
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+
+2026-01-26 15:29:20,955 - INFO - === 使用Docker容器构建APK ===
+2026-01-26 15:29:20,962 - INFO - ✅ 输出目录已创建: D:\review\bin
+2026-01-26 15:29:20,962 - INFO - 正在拉取Ubuntu镜像...
+2026-01-26 15:29:20,964 - INFO - 执行命令: docker pull ubuntu:22.04
+2026-01-26 15:29:43,724 - WARNING - 命令错误:
+Error response from daemon: pull access denied for ubuntu, repository does not exist or may require 'docker login'
+
+2026-01-26 15:29:43,725 - ERROR - 命令执行失败，返回码: 1
+2026-01-26 15:29:43,739 - ERROR - ❌ 脚本执行失败: Command '['docker', 'pull', 'ubuntu:22.04']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "D:\review\build_apk_final.py", line 166, in main
+    success = build_with_docker()
+  File "D:\review\build_apk_final.py", line 72, in build_with_docker
+    run_command(["docker", "pull", "ubuntu:22.04"])
+  File "D:\review\build_apk_final.py", line 46, in run_command
+    raise subprocess.CalledProcessError(result.returncode, cmd)
+subprocess.CalledProcessError: Command '['docker', 'pull', 'ubuntu:22.04']' returned non-zero exit status 1.
+2026-01-26 15:29:43,742 - INFO - =========================================
+2026-01-26 15:29:43,742 - ERROR - 💥 APK构建失败！
+2026-01-26 15:29:43,742 - INFO - =========================================
+2026-01-26 15:32:16,056 - INFO - =========================================
+2026-01-26 15:32:16,056 - INFO -         Android APK 最终构建脚本        
+2026-01-26 15:32:16,059 - INFO - =========================================
+2026-01-26 15:32:16,060 - INFO - Python版本: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2026-01-26 15:32:16,060 - INFO - 当前操作系统: win32
+2026-01-26 15:32:16,060 - INFO - 当前目录: D:\review
+2026-01-26 15:32:16,060 - INFO - 检测到Windows系统，将使用Docker容器构建APK
+2026-01-26 15:32:16,060 - INFO - 执行命令: docker --version
+2026-01-26 15:32:16,150 - INFO - 命令输出:
+Docker version 29.1.3, build f52814d
+
+2026-01-26 15:32:16,150 - INFO - 执行命令: docker info
+2026-01-26 15:32:16,707 - INFO - 命令输出:
+Client:
+ Version:    29.1.3
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.17.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-ai.exe
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.30.1-desktop.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.0.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-compose.exe
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     C:\Program Files\Docker\cli-plugins\docker-debug.exe
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.2.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-desktop.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     C:\Program Files\Docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-init.exe
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.35.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-mcp.exe
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.0.6
+    Path:     C:\Program Files\Docker\cli-plugins\docker-model.exe
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.5.40
+    Path:     C:\Program Files\Docker\cli-plugins\docker-offload.exe
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.0.22
+    Path:     C:\Program Files\Docker\cli-plugins\docker-pass.exe
+  sandbox: Docker Sandbox (Docker Inc.)
+    Version:  v0.6.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sandbox.exe
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sbom.exe
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.19.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 29.1.3
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: dea7da592f5d1d2b7755e3a161be07f43fad8f75
+ runc version: v1.3.4-0-gd6d73eb8
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.6.87.2-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 3.748GiB
+ Name: docker-desktop
+ ID: e6dcb587-e428-4c68-8be8-d4a4811262e9
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Registry Mirrors:
+  https://registry.cn-hangzhou.aliyuncs.com/
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+
+2026-01-26 15:32:16,709 - INFO - === 使用Docker容器构建APK ===
+2026-01-26 15:32:16,715 - INFO - ✅ 输出目录已创建: D:\review\bin
+2026-01-26 15:32:16,716 - INFO - 正在拉取Ubuntu镜像...
+2026-01-26 15:32:16,716 - INFO - 执行命令: docker pull ubuntu:22.04
+2026-01-26 15:32:19,854 - WARNING - 命令错误:
+Error response from daemon: pull access denied for ubuntu, repository does not exist or may require 'docker login'
+
+2026-01-26 15:32:19,854 - ERROR - 命令执行失败，返回码: 1
+2026-01-26 15:32:19,856 - ERROR - ❌ 脚本执行失败: Command '['docker', 'pull', 'ubuntu:22.04']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "D:\review\build_apk_final.py", line 166, in main
+    success = build_with_docker()
+  File "D:\review\build_apk_final.py", line 72, in build_with_docker
+    run_command(["docker", "pull", "ubuntu:22.04"])
+  File "D:\review\build_apk_final.py", line 46, in run_command
+    raise subprocess.CalledProcessError(result.returncode, cmd)
+subprocess.CalledProcessError: Command '['docker', 'pull', 'ubuntu:22.04']' returned non-zero exit status 1.
+2026-01-26 15:32:19,857 - INFO - =========================================
+2026-01-26 15:32:19,857 - ERROR - 💥 APK构建失败！
+2026-01-26 15:32:19,857 - INFO - =========================================
+2026-01-26 15:34:44,129 - INFO - =========================================
+2026-01-26 15:34:44,129 - INFO -         Android APK 最终构建脚本        
+2026-01-26 15:34:44,131 - INFO - =========================================
+2026-01-26 15:34:44,131 - INFO - Python版本: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+2026-01-26 15:34:44,133 - INFO - 当前操作系统: win32
+2026-01-26 15:34:44,133 - INFO - 当前目录: D:\review
+2026-01-26 15:34:44,133 - INFO - 检测到Windows系统，尝试使用Docker容器构建APK
+2026-01-26 15:34:44,133 - INFO - 执行命令: docker --version
+2026-01-26 15:34:44,215 - INFO - 命令输出:
+Docker version 29.1.3, build f52814d
+
+2026-01-26 15:34:44,215 - INFO - 执行命令: docker info
+2026-01-26 15:34:45,008 - INFO - 命令输出:
+Client:
+ Version:    29.1.3
+ Context:    desktop-linux
+ Debug Mode: false
+ Plugins:
+  ai: Docker AI Agent - Ask Gordon (Docker Inc.)
+    Version:  v1.17.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-ai.exe
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  v0.30.1-desktop.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-buildx.exe
+  compose: Docker Compose (Docker Inc.)
+    Version:  v5.0.1
+    Path:     C:\Program Files\Docker\cli-plugins\docker-compose.exe
+  debug: Get a shell into any image or container (Docker Inc.)
+    Version:  0.0.47
+    Path:     C:\Program Files\Docker\cli-plugins\docker-debug.exe
+  desktop: Docker Desktop commands (Docker Inc.)
+    Version:  v0.2.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-desktop.exe
+  extension: Manages Docker extensions (Docker Inc.)
+    Version:  v0.2.31
+    Path:     C:\Program Files\Docker\cli-plugins\docker-extension.exe
+  init: Creates Docker-related starter files for your project (Docker Inc.)
+    Version:  v1.4.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-init.exe
+  mcp: Docker MCP Plugin (Docker Inc.)
+    Version:  v0.35.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-mcp.exe
+  model: Docker Model Runner (Docker Inc.)
+    Version:  v1.0.6
+    Path:     C:\Program Files\Docker\cli-plugins\docker-model.exe
+  offload: Docker Offload (Docker Inc.)
+    Version:  v0.5.40
+    Path:     C:\Program Files\Docker\cli-plugins\docker-offload.exe
+  pass: Docker Pass Secrets Manager Plugin (beta) (Docker Inc.)
+    Version:  v0.0.22
+    Path:     C:\Program Files\Docker\cli-plugins\docker-pass.exe
+  sandbox: Docker Sandbox (Docker Inc.)
+    Version:  v0.6.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sandbox.exe
+  sbom: View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc.)
+    Version:  0.6.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-sbom.exe
+  scout: Docker Scout (Docker Inc.)
+    Version:  v1.19.0
+    Path:     C:\Program Files\Docker\cli-plugins\docker-scout.exe
+
+Server:
+ Containers: 0
+  Running: 0
+  Paused: 0
+  Stopped: 0
+ Images: 0
+ Server Version: 29.1.3
+ Storage Driver: overlayfs
+  driver-type: io.containerd.snapshotter.v1
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ CDI spec directories:
+  /etc/cdi
+  /var/run/cdi
+ Discovered Devices:
+  cdi: docker.com/gpu=webgpu
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 nvidia runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: dea7da592f5d1d2b7755e3a161be07f43fad8f75
+ runc version: v1.3.4-0-gd6d73eb8
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.6.87.2-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 8
+ Total Memory: 3.748GiB
+ Name: docker-desktop
+ ID: e6dcb587-e428-4c68-8be8-d4a4811262e9
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ HTTP Proxy: http.docker.internal:3128
+ HTTPS Proxy: http.docker.internal:3128
+ No Proxy: hubproxy.docker.internal
+ Labels:
+  com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+ Experimental: false
+ Insecure Registries:
+  hubproxy.docker.internal:5555
+  ::1/128
+  127.0.0.0/8
+ Registry Mirrors:
+  https://registry.cn-hangzhou.aliyuncs.com/
+ Live Restore Enabled: false
+ Firewall Backend: iptables
+
+
+2026-01-26 15:34:45,009 - INFO - 尝试使用简化的Docker构建方式...
+2026-01-26 15:34:45,015 - INFO - 尝试使用kivy/buildozer镜像构建...
+2026-01-26 15:34:45,015 - INFO - 执行命令: docker run --rm -v D:\review:/home/user/app -w /home/user/app kivy/buildozer bash -c pip install --upgrade buildozer cython && buildozer android debug
+2026-01-26 15:35:07,149 - WARNING - 命令错误:
+Unable to find image 'kivy/buildozer:latest' locally
+docker: Error response from daemon: pull access denied for kivy/buildozer, repository does not exist or may require 'docker login'
+
+Run 'docker run --help' for more information
+
+2026-01-26 15:35:07,150 - ERROR - 命令执行失败，返回码: 125
+2026-01-26 15:35:07,152 - INFO - 尝试使用ubuntu镜像构建...
+2026-01-26 15:35:07,152 - INFO - 执行命令: docker run --rm -v D:\review:/app -w /app ubuntu:22.04 bash -c #!/bin/bash
+set -e
+
+# 使用国内镜像源
+sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+
+# 安装依赖
+apt-get update -qq
+apt-get install -qq --yes --no-install-recommends python3 python3-pip openjdk-17-jdk
+
+# 安装buildozer
+pip3 install --upgrade buildozer cython
+
+# 构建APK
+buildozer android debug
+
+2026-01-26 15:35:28,842 - WARNING - 命令错误:
+Unable to find image 'ubuntu:22.04' locally
+docker: Error response from daemon: pull access denied for ubuntu, repository does not exist or may require 'docker login'
+
+Run 'docker run --help' for more information
+
+2026-01-26 15:35:28,842 - ERROR - 命令执行失败，返回码: 125
+2026-01-26 15:35:28,845 - ERROR - ❌ 脚本执行失败: Command '['docker', 'run', '--rm', '-v', 'D:\\review:/app', '-w', '/app', 'ubuntu:22.04', 'bash', '-c', "#!/bin/bash\nset -e\n\n# 使用国内镜像源\nsed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list\nsed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list\n\n# 安装依赖\napt-get update -qq\napt-get install -qq --yes --no-install-recommends python3 python3-pip openjdk-17-jdk\n\n# 安装buildozer\npip3 install --upgrade buildozer cython\n\n# 构建APK\nbuildozer android debug\n"]' returned non-zero exit status 125.
+Traceback (most recent call last):
+  File "D:\review\build_apk_final.py", line 198, in main
+    run_command([
+  File "D:\review\build_apk_final.py", line 50, in run_command
+    raise subprocess.CalledProcessError(result.returncode, cmd)
+subprocess.CalledProcessError: Command '['docker', 'run', '--rm', '-v', 'D:\\review:/home/user/app', '-w', '/home/user/app', 'kivy/buildozer', 'bash', '-c', 'pip install --upgrade buildozer cython && buildozer android debug']' returned non-zero exit status 125.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\review\build_apk_final.py", line 208, in main
+    run_command([
+  File "D:\review\build_apk_final.py", line 50, in run_command
+    raise subprocess.CalledProcessError(result.returncode, cmd)
+subprocess.CalledProcessError: Command '['docker', 'run', '--rm', '-v', 'D:\\review:/app', '-w', '/app', 'ubuntu:22.04', 'bash', '-c', "#!/bin/bash\nset -e\n\n# 使用国内镜像源\nsed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list\nsed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list\n\n# 安装依赖\napt-get update -qq\napt-get install -qq --yes --no-install-recommends python3 python3-pip openjdk-17-jdk\n\n# 安装buildozer\npip3 install --upgrade buildozer cython\n\n# 构建APK\nbuildozer android debug\n"]' returned non-zero exit status 125.
+2026-01-26 15:35:28,847 - INFO - =========================================
+2026-01-26 15:35:28,847 - ERROR - 💥 APK构建失败！
+2026-01-26 15:35:28,847 - INFO - 尝试使用简化构建方案...
+2026-01-26 15:35:28,847 - INFO - === 尝试不使用Docker的简化构建方案 ===
+2026-01-26 15:35:28,849 - INFO - ✅ 输出目录已创建: D:\review\bin
+2026-01-26 15:35:28,850 - INFO - 安装构建依赖...
+2026-01-26 15:35:28,850 - INFO - 执行命令: C:\Users\熊\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip
+2026-01-26 15:35:31,036 - INFO - 命令输出:
+Requirement already satisfied: pip in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (25.3)
+
+2026-01-26 15:35:31,037 - INFO - 执行命令: C:\Users\熊\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade kivy==2.3.1 matplotlib==3.10.8 numpy==2.2.6
+2026-01-26 15:35:34,505 - INFO - 命令输出:
+Requirement already satisfied: kivy==2.3.1 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (2.3.1)
+Requirement already satisfied: matplotlib==3.10.8 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (3.10.8)
+Requirement already satisfied: numpy==2.2.6 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (2.2.6)
+Requirement already satisfied: Kivy-Garden>=0.1.4 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (0.1.5)
+Requirement already satisfied: docutils in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (0.22.4)
+Requirement already satisfied: pygments in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (2.19.2)
+Requirement already satisfied: requests in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (2.32.5)
+Requirement already satisfied: filetype in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (1.2.0)
+Requirement already satisfied: kivy-deps.angle~=0.4.0 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (0.4.0)
+Requirement already satisfied: kivy-deps.sdl2~=0.8.0 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (0.8.0)
+Requirement already satisfied: kivy-deps.glew~=0.3.1 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (0.3.1)
+Requirement already satisfied: pypiwin32 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from kivy==2.3.1) (223)
+Requirement already satisfied: contourpy>=1.0.1 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from matplotlib==3.10.8) (1.3.2)
+Requirement already satisfied: cycler>=0.10 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from matplotlib==3.10.8) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from matplotlib==3.10.8) (4.61.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from matplotlib==3.10.8) (1.4.9)
+Requirement already satisfied: packaging>=20.0 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from matplotlib==3.10.8) (26.0)
+Requirement already satisfied: pillow>=8 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from matplotlib==3.10.8) (12.1.0)
+Requirement already satisfied: pyparsing>=3 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from matplotlib==3.10.8) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from matplotlib==3.10.8) (2.9.0.post0)
+Requirement already satisfied: six>=1.5 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from python-dateutil>=2.7->matplotlib==3.10.8) (1.17.0)
+Requirement already satisfied: pywin32>=223 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from pypiwin32->kivy==2.3.1) (311)
+Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from requests->kivy==2.3.1) (3.4.4)
+Requirement already satisfied: idna<4,>=2.5 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from requests->kivy==2.3.1) (3.11)
+Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from requests->kivy==2.3.1) (2.6.3)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\熊\appdata\local\programs\python\python310\lib\site-packages (from requests->kivy==2.3.1) (2026.1.4)
+
+2026-01-26 15:35:34,506 - INFO - ✅ 构建说明已生成: D:\review\bin\BUILD_INSTRUCTIONS.md
+2026-01-26 15:35:34,511 - INFO - 请查看BUILD_INSTRUCTIONS.md文件获取详细构建方案
+2026-01-26 15:35:34,511 - INFO - =========================================

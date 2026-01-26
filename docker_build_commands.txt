@@ -1,0 +1,77 @@
+# Docker构建APK命令集合
+
+# --------------------
+# 步骤1：配置Docker国内镜像源（手动方法）
+# --------------------
+
+# 1. 打开文本编辑器，创建或修改以下文件：
+#    C:\Users\<你的用户名>\.docker\daemon.json
+
+# 2. 写入以下内容并保存：
+{
+  "registry-mirrors": [
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://hub-mirror.c.163.com",
+    "https://registry.docker-cn.com"
+  ]
+}
+
+# 3. 重启Docker Desktop
+
+
+# --------------------
+# 步骤2：使用Docker构建APK
+# --------------------
+
+# 确保Docker Desktop已运行，打开PowerShell，进入项目目录：
+cd d:\review
+
+# 拉取Kivy Buildozer镜像（使用国内镜像源）
+docker pull kivy/buildozer
+
+# 运行Docker容器构建APK
+docker run --rm -v ${PWD}:/home/user/app -w /home/user/app kivy/buildozer buildozer android debug
+
+
+# --------------------
+# 步骤3：获取构建结果
+# --------------------
+
+# 构建成功后，APK文件将生成在bin目录下
+# 使用以下命令查看生成的APK文件：
+get-childitem bin/*.apk
+
+
+# --------------------
+# 简化命令（一步构建）
+# --------------------
+
+# 直接运行以下命令构建APK：
+docker run --rm -v ${PWD}:/home/user/app -w /home/user/app kivy/buildozer buildozer android debug
+
+
+# --------------------
+# 常见问题解决
+# --------------------
+
+# 1. 如果拉取镜像失败，检查：
+#    - Docker Desktop是否已重启
+#    - 网络连接是否正常
+#    - daemon.json配置是否正确
+
+# 2. 如果构建失败，查看日志：
+#    构建日志保存在：.buildozer/android/build.log
+#    使用以下命令查看最近100行日志：
+get-content .buildozer/android/build.log -tail 100
+
+# 3. 如果遇到权限问题，尝试以管理员身份运行PowerShell
+
+
+# --------------------
+# Kivy Launcher快速测试方法
+# --------------------
+
+# 如果Docker构建仍然遇到问题，可以使用Kivy Launcher快速测试：
+# 1. 在Android设备上安装Kivy Launcher（Google Play商店）
+# 2. 将项目文件夹复制到设备的Kivy文件夹下
+# 3. 打开Kivy Launcher，选择你的应用即可运行
