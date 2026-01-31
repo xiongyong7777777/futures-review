@@ -13,32 +13,32 @@ jobs:
     timeout-minutes: 120
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
 
-    - name: Install system dependencies
-      run: |
-        sudo apt update
-        sudo apt install -y git python3-pip build-essential \
-                          libffi-dev libssl-dev zlib1g-dev \
-                          libncurses5-dev libncursesw5-dev libreadline-dev \
-                          libsqlite3-dev libgdbm-dev libdb5.3-dev \
-                          libbz2-dev libexpat1-dev liblzma-dev tk-dev \
-                          wget curl unzip
+      - name: Install system dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y git python3-pip build-essential \
+                            libffi-dev libssl-dev zlib1g-dev \
+                            libncurses5-dev libncursesw5-dev libreadline-dev \
+                            libsqlite3-dev libgdbm-dev libdb5.3-dev \
+                            libbz2-dev libexpat1-dev liblzma-dev tk-dev \
+                            wget curl unzip
 
-    - name: Install Python dependencies
-      run: |
-        pip install --upgrade pip
-        pip install buildozer
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install buildozer
 
-    - name: Create buildozer.spec
-      run: |
-        cat > buildozer.spec << 'EOF'
+      - name: Create buildozer.spec
+        run: |
+          cat > buildozer.spec << 'EOF'
 [app]
 title = 期货复盘APP
 package.name = futuresreview
@@ -60,12 +60,12 @@ log_level = 2
 warn_on_root = 1
 EOF
 
-    - name: Build APK
-      run: |
-        buildozer android debug
+      - name: Build APK
+        run: |
+          buildozer android debug
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v3
-      with:
-        name: futuresreview-apk
-        path: ./bin/*.apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: futuresreview-apk
+          path: ./bin/*.apk
