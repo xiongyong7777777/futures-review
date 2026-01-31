@@ -5,12 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:  # 添加这一行，启用手动触发
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 120  # 增加超时时间到 2 小时
+    timeout-minutes: 120
 
     steps:
     - name: Checkout code
