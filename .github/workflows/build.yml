@@ -30,7 +30,7 @@ jobs:
           echo "[app]" > buildozer.spec && echo "title = ÆÚ»õ¸´ÅÌAPP" >> buildozer.spec && echo "package.name = futuresreview" >> buildozer.spec && echo "package.domain = org.futuresreview" >> buildozer.spec && echo "source.dir = ." >> buildozer.spec && echo "source.include_exts = py,png,jpg,kv,atlas" >> buildozer.spec && echo "source.include_patterns = *.py" >> buildozer.spec && echo "version = 0.1" >> buildozer.spec && echo "requirements = python3,kivy,sqlite3" >> buildozer.spec && echo "orientation = landscape" >> buildozer.spec && echo "android.permissions = INTERNET" >> buildozer.spec && echo "android.api = 31" >> buildozer.spec && echo "android.minapi = 21" >> buildozer.spec && echo "android.ndk = 23b" >> buildozer.spec && echo "android.arch = armeabi-v7a" >> buildozer.spec && echo "" >> buildozer.spec && echo "[buildozer]" >> buildozer.spec && echo "log_level = 2" >> buildozer.spec && echo "warn_on_root = 1" >> buildozer.spec && buildozer android debug
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: futuresreview-apk
-          path: ./bin/*.apk
+  uses: actions/upload-artifact@v4
+  with:
+    name: futuresreview-apk
+    path: ./bin/*.apk
